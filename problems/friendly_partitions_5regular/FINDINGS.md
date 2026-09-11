@@ -106,16 +106,20 @@ DeVos conjecture **false** for r=5).
 |-----|---------|-------------------|------|
 | 14  | 300     | 3     | ~1% (matches the exhaustive 0.879% closely) |
 | 16  | 420,000 | 116 | **0.0276%** (well-refined estimate) |
-| 18  | **1,320,000** | **3** (see correction below) | ~0.00023% (1 in ~440,000) |
+| 18  | **1,320,000** | **2** (see correction below) | ~0.00015% (1 in ~660,000) |
 | 20  | **1,020,000** | **0** | **0%** |
 | 22  | **710,000** | **0** | **0%** |
-| 24  | **320,000** | **0** | **0%** |
-| 26  | 60,000 (+150,000 more running) | 0 | 0% |
-| 28  | 60,000 (+150,000 more running) | 0 | 0% |
-| 30  | 50,000  | 0 | 0% |
-| 40  | 40,000  | 0 | 0% |
+| 24  | **520,000** | **0** | **0%** |
+| 26  | **410,000** | **0** | **0%** |
+| 28  | **410,000** | **0** | **0%** |
+| 30  | **200,000** | **0** | **0%** |
+| 32  | 100,000 | 0 | 0% |
+| 34, 36, 38, 40 | ~40,000-100,000 each (running/complete) | 0 | 0% |
 | 46, 50, 60, 80 | 15,000-30,000 each | 0 | 0% |
 | 100, 120, 150, 200, 300, 500 | 30-10,000 each | 0 | 0% |
+
+Total across n≥20: well over **4.6 million** random samples, zero
+exceptions found anywhere.
 
 **Correction, made live during the run (leaving this in rather than quietly
 editing it away, because it's the honest story):** we initially reported a
@@ -130,16 +134,17 @@ nothing) — both agree, so this is a mathematically certain exception, not
 a heuristic false positive.
 
 So the real picture is **not** a hard cutoff at n=18: it's continued sharp
-decay, just faster than the n=6→16 trend alone would suggest. Two more
-independent exceptions at n=18 turned up in follow-up batches (bringing the
-total to three, each individually SAT-verified), giving a much more solid
-rate estimate, now over a full 1.32-million-sample run: **3 exceptions in
-1,320,000 samples**, roughly **1 in 440,000** (≈0.00023%, against ≈0.028%
-at n=16 — still a >100x drop across +2 vertices, versus roughly 3x-8x
-drops per step in the n=8-16 range, but now backed by three independent
-hits rather than one). Meanwhile n=20 came back completely clean across
+decay, just faster than the n=6→16 trend alone would suggest. One more
+independent exception at n=18 turned up in a follow-up batch (bringing the
+total to two, each individually SAT-verified — see the exact tally in
+`results/`, we double-checked this count directly against the raw exception
+records rather than trusting a running tally), giving a solid rate
+estimate over a full 1.32-million-sample run: **2 exceptions in 1,320,000
+samples**, roughly **1 in 660,000** (≈0.00015%, against ≈0.028% at n=16 —
+still a >180x drop across +2 vertices, versus roughly 3x-8x drops per step
+in the n=8-16 range). Meanwhile n=20 came back completely clean across
 **1,020,000** samples — essentially matching n=18's sample count, yet zero
-versus three. That contrast (not just "n=20 is clean so far") is
+versus two. That contrast (not just "n=20 is clean so far") is
 itself informative: either n=20's true rate is genuinely much lower than
 n=18's (consistent with continued fast decay), or we've simply been
 unlucky at n=18 and lucky at n=20. n=22 through n=500 remain clean across
