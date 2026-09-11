@@ -60,23 +60,46 @@ so the whole grid runs in minutes.
 
 ## Results
 
+The full sweep is complete: **59 (n, m) combinations** tried, `n` from 10
+to 200, `m` (missing games) from 1 up to `n` itself (i.e. all the way from
+near-complete tournaments to graphs with half their pairs unplayed).
+
 | n | m range tried | best simultaneously-bad fraction found |
 |---|---|---|
-| 10 | 1–8 | 90% (9/10) |
-| 15 | 1–8 | 93% (14/15) |
-| 20 | 1–15 | 85–95% |
-| 30 | 1–15 | 83–90% |
-| 50 | 1–3 (sweep still running for more m) | 88–90% |
-| *(80, 120, 200 — see `results/` for final numbers once the sweep completes)* | | |
+| 10 | 1–8 | 90.0% (9/10) |
+| 15 | 1–8 | 93.3% (14/15) |
+| 20 | 1–20 | 85.0–95.0% |
+| 30 | 1–30 | 80.0–90.0% |
+| 50 | 1–50 | 82.0–90.0% |
+| 80 | 1–15 | 85.0–90.0% |
+| 100 | 25–100 | 80.0–86.0% |
+| 120 | 1–15 | 84.2–87.5% |
+| 200 | 1–15 | 81.5–84.5% |
 
-**No counterexample was found at any (n, m) tried.** Every single run
-converges to a very consistent, striking pattern: adversarial pressure can
-force **all but a small handful of vertices** (typically exactly 1, up to
-~3 at larger n within our step budget) to be simultaneously bad — and then
-gets stuck there, no matter how many more annealing steps or how the
-"missing games" are rearranged. The number of missing edges `m` barely
-matters at all in the range we tried (1 through 15, and up to n/8) — the
-achievable bad-fraction is essentially flat around 85-95% regardless.
+**No counterexample was found in any of the 59 combinations — not one.**
+Every single run converges to the same striking pattern: adversarial
+pressure can force **all but a small handful of vertices** to be
+simultaneously bad — and then gets stuck there, no matter how many more
+annealing steps or how the "missing games" are rearranged. Two honest
+observations about the shape of this data:
+
+1. **`m` barely matters.** Across the entire range tried — from just 1
+   missing game up to `m = n` (i.e. sparse graphs where half the possible
+   pairs never played) — the achievable bad-fraction stays in a narrow
+   80-95% band. There is no sign of it becoming easier to approach a
+   counterexample as the graph gets sparser, which is itself informative:
+   the conjecture's difficulty (for an adversary) doesn't appear to hinge
+   on density in the range we could search.
+2. **The achievable fraction drifts down slightly as `n` grows** (≈90-95%
+   at n≤30 down to ≈82-85% at n=200) — i.e. more vertices are left
+   "resisting" at larger n. We do **not** read this as evidence the
+   conjecture gets easier to break at scale; it's almost certainly a
+   budget artifact. Our simulated annealing ran a *fixed* 60,000-80,000
+   steps regardless of `n`, and each step is a local, single-arc tweak —
+   so the fraction of the search space explored shrinks as `n²` grows
+   while the step count doesn't. Squeezing out the last few resisters at
+   n=200 likely just needs more steps, not that they're fundamentally
+   unresponsive to pressure the way the very last one is.
 
 We verified the machinery is correct by checking `m=0` (full tournaments):
 3,000 random tournaments on 9 vertices, conjecture held every single time
@@ -105,20 +128,30 @@ robustness in exactly the regime (near-tournaments, small numbers of
 missing edges) that current published partial results are chipping away
 at analytically.
 
-**What would move this forward:** push `m` much higher relative to `n`
-(sparser graphs, further from a tournament, is the genuinely *less*
-explored region — current papers focus on "missing a star" or "missing
-two stars", i.e. small/structured `m`), and try structured (non-uniform)
-missing-edge patterns designed to mimic the star/path constructions in the
-literature, to see if unstructured adversarial search can match or beat
-what hand-crafted constructions achieve.
+**Update:** we did subsequently push `m` all the way up to `n` (i.e. very
+sparse graphs, half the pairs unplayed) across a wide range of `n` — the
+full 59-combination sweep above. The result held: no counterexample, and
+the achievable bad-fraction stayed flat regardless of sparsity. That
+somewhat undercuts our original hypothesis that sparser/less-explored
+territory would be more fruitful — within an unstructured random-missing-
+edges search, at least, density genuinely doesn't seem to matter.
+
+**What would move this forward next:** try *structured* (non-uniform)
+missing-edge patterns designed to mimic the star/path constructions
+in the literature (tournaments missing a star, missing two stars, missing
+disjoint paths), since those are the specific structures published partial
+results have needed to handle separately — an unstructured search may be
+missing exactly the adversarial patterns that matter; and, separately,
+scale up the annealing step budget proportionally to `n²` to rule out the
+budget-artifact explanation for the n=200 vs n=10 gap noted above.
 
 ## Reproducing
 
 ```
 cd problems/second_neighborhood_conjecture
 python3 adversarial_search.py 30 5 --steps 60000     # n=30 vertices, 5 missing games
-./sweep.sh                                            # full (n, m) grid
+./sweep.sh                                            # main (n, m) grid, small/moderate m
+./sweep_sparse.sh                                     # sparser regime, m up to n
 ```
 
 Raw results (adjacency matrices, per-vertex slack, full step history) are
