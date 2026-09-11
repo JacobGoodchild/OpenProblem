@@ -127,13 +127,18 @@ DeVos conjecture **false** for r=5).
 | 54  | 50,000  | 0 | 0% |
 | 56  | 50,000  | 0 | 0% |
 | 58  | 50,000  | 0 | 0% |
-| 60, 80 | 20,000-70,000 each | 0 | 0% |
+| 60  | 50,000  | 0 | 0% |
+| 62  | 50,000  | 0 | 0% |
+| 64  | 50,000  | 0 | 0% |
+| 66  | 50,000  | 0 | 0% |
+| 68  | 50,000  | 0 | 0% |
+| 80  | 15,000-20,000 | 0 | 0% |
 | 100, 120, 150, 200, 300, 500 | 30-10,000 each | 0 | 0% |
 
-Total across n≥20: well over **5.5 million** random samples, zero
+Total across n≥20: well over **6 million** random samples, zero
 exceptions found anywhere. The clean run now extends unbroken and
 densely-sampled (50,000-120,000 independent draws per even n, no gaps)
-all the way from n=20 through n=58, plus lighter spot-checks out to n=500.
+all the way from n=20 through n=68, plus lighter spot-checks out to n=500.
 
 **Correction, made live during the run (leaving this in rather than quietly
 editing it away, because it's the honest story):** we initially reported a
