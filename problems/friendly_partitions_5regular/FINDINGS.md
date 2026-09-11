@@ -107,7 +107,7 @@ DeVos conjecture **false** for r=5).
 | 14  | 300     | 3     | ~1% (matches the exhaustive 0.879% closely) |
 | 16  | 420,000 | 116 | **0.0276%** (well-refined estimate) |
 | 18  | ~1,027,000 so far (820,000 complete + a running batch) | **3** (see correction below) | ~0.00029% (1 in ~342,000) |
-| 20  | **820,000** | **0** | **0%** |
+| 20  | **1,020,000** | **0** | **0%** |
 | 22  | **710,000** | **0** | **0%** |
 | 24  | **320,000** | **0** | **0%** |
 | 26  | 60,000 (+150,000 more running) | 0 | 0% |
