@@ -106,8 +106,8 @@ DeVos conjecture **false** for r=5).
 |-----|---------|-------------------|------|
 | 14  | 300     | 3     | ~1% (matches the exhaustive 0.879% closely) |
 | 16  | 420,000 | 116 | **0.0276%** (well-refined estimate) |
-| 18  | 820,000 (+500,000 more running) | **2** (see correction below) | ~0.00024% (1 in ~410,000) |
-| 20  | **420,000** | **0** | **0%** |
+| 18  | ~1,027,000 so far (820,000 complete + a running batch) | **3** (see correction below) | ~0.00029% (1 in ~342,000) |
+| 20  | **820,000** | **0** | **0%** |
 | 22  | **710,000** | **0** | **0%** |
 | 24  | **320,000** | **0** | **0%** |
 | 26  | 60,000 (+150,000 more running) | 0 | 0% |
@@ -130,15 +130,20 @@ nothing) — both agree, so this is a mathematically certain exception, not
 a heuristic false positive.
 
 So the real picture is **not** a hard cutoff at n=18: it's continued sharp
-decay, just faster than the n=6→16 trend alone would suggest. A second
-independent exception at n=18 turned up in a follow-up 400,000-sample
-batch, giving a much more solid rate estimate: **2 exceptions in 820,000
-samples**, roughly **1 in 410,000** (≈0.00024%, against ≈0.028% at n=16 —
-still a >100x drop across +2 vertices, versus roughly 3x-8x drops per step
-in the n=8-16 range, but now backed by two independent hits rather than
-one). n=20 through n=500 remain clean across large sample counts,
-consistent with the rate continuing to fall off a cliff — just not landing
-on literally zero at n=18 specifically. Whether it truly reaches (and stays at) zero
+decay, just faster than the n=6→16 trend alone would suggest. Two more
+independent exceptions at n=18 turned up in follow-up batches (bringing the
+total to three, each individually SAT-verified), giving a much more solid
+rate estimate: roughly **1 in 340,000-410,000** (≈0.0003%, against ≈0.028%
+at n=16 — still a >90x drop across +2 vertices, versus roughly 3x-8x drops
+per step in the n=8-16 range, but now backed by three independent hits
+rather than one). Meanwhile n=20 came back completely clean across
+**820,000** samples — the same order of magnitude as n=18's sample count,
+yet zero versus three. That contrast (not just "n=20 is clean so far") is
+itself informative: either n=20's true rate is genuinely much lower than
+n=18's (consistent with continued fast decay), or we've simply been
+unlucky at n=18 and lucky at n=20. n=22 through n=500 remain clean across
+similarly large sample counts, consistent with the rate continuing to fall
+off a cliff — just not landing on literally zero at n=18 specifically. Whether it truly reaches (and stays at) zero
 somewhere close by, or the tail just keeps thinning out forever, is exactly
 the crux of the open conjecture, and this single data point doesn't settle
 it either way — if anything it's a small piece of evidence *against* a
