@@ -1,0 +1,13 @@
+{
+  "n": 18,
+  "samples_checked": 400000,
+  "heuristic_hits": 240841,
+  "num_exceptions": 1,
+  "exceptions": [
+    {
+      "n": 18,
+      "graph6": "Q[?Gf?LMM?GT@Ep?@o_eECa_g@g"
+    }
+  ],
+  "elapsed_seconds": 920.6521244049072
+}
