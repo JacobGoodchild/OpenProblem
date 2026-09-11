@@ -55,7 +55,6 @@ def badness(G, rng, restarts=6, max_flips=1500):
     if r.found:
         return 0
     return max(r.closest_unhappy, 0)
-    return best
 
 
 def double_edge_swap(G, rng, tries=50):

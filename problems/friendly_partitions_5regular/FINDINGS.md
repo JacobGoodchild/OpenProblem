@@ -96,24 +96,38 @@ DeVos conjecture **false** for r=5).
 
 ### Random sampling, larger n
 
-| n   | samples | exceptions found | rate |
-|-----|---------|-------------------|------|
-| 14  | 300     | 3                 | ~1%  |
-| 16  | 20,000  | 9                 | 0.045% |
-| 18  | 20,000 (+100k running) | 0 (so far) | — |
-| 20  | 20,000 (+100k running) | 0 (so far) | — |
-| 24  | 20,000  | 0                 | 0% |
-| 100 | 100     | 0                 | 0% |
-| 300 | 30      | 0                 | 0% |
+| n   | samples          | exceptions found | rate |
+|-----|------------------|-------------------|------|
+| 14  | 300              | 3                 | ~1%  |
+| 16  | 120,000 (two independent runs) | ~20 distinct | ~0.017-0.045% (consistent across runs) |
+| 18  | 120,000 (20k + 100k) | 0             | 0% |
+| 20  | 120,000 (20k + 100k) | 0             | 0% |
+| 22  | 21,300+ (running)| 0 (so far)        | — |
+| 24  | 20,000           | 0                 | 0% |
+| 100 | 100              | 0                 | 0% |
+| 300 | 30               | 0                 | 0% |
 
-The n=16 exceptions are genuine, SAT-verified (not heuristic artifacts).
-Structurally, the small exceptions we inspected (at n=12 and n=16) are
-**not** built from cliques — none of a sample of 200 n=12 exceptions
-contains a `K6` subgraph, they are almost all maximally (5-)connected, and
-the n=16 examples found have **trivial automorphism group** (no special
-symmetry at all) — so these are not "obvious" symmetric constructions, they
-are structurally generic-looking 5-regular graphs that simply happen to
-have no friendly partition.
+The n=16 exceptions are genuine, SAT-verified (not heuristic artifacts),
+and **0 out of 120,000** independent random samples at n=18 and again at
+n=20 turned up a single one. Given the n=16 rate (roughly 1 in 2,000-6,000),
+plain statistics says: if n=18/20 had a similar rate we'd expect to have
+seen dozens by now. So either the rate has dropped sharply again between
+n=16 and n=18 (consistent with the fast-decaying trend from the exhaustive
+data), or it has truly hit zero. We cannot yet tell those apart.
+
+**Structural fingerprint of the n=16 exceptions.** Pooling all ~20 distinct
+ones found across independent runs, *every single one* has: connectivity
+exactly 5 (maximally connected for a 5-regular graph), diameter exactly 3,
+and girth exactly 3 (contains a triangle). All but one has a **trivial**
+automorphism group (no symmetry at all); one has an automorphism group of
+size 2. None of a separately-sampled 200 n=12 exceptions contains a `K6`
+subgraph. So: these are not exotic symmetric constructions — they're
+"generic-looking," maximally-connected, triangle-containing 5-regular
+graphs that simply happen to have no friendly partition. The
+near-total absence of symmetry (order-1 automorphism group, 19 times out of
+20) is itself notable: it rules out the easy hypothesis that exceptions are
+always highly structured/algebraic (like Cayley graphs) — most of what we
+found are not.
 
 ### Adversarial graph-space search
 
