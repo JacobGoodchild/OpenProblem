@@ -1,0 +1,210 @@
+{
+  "n": 18,
+  "steps": 40000,
+  "seed": 100,
+  "best_heuristic_badness": 0,
+  "sat_has_friendly_partition": true,
+  "graph6": "QeEOAGBAPWCT@WGeTAQsAgg@?UG",
+  "history": [
+    {
+      "step": 0,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 1000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 2000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 3000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 4000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 5000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 6000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 7000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 8000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 9000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 10000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 11000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 12000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 13000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 14000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 15000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 16000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 17000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 18000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 19000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 20000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 21000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 22000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 23000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 24000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 25000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 26000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 27000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 28000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 29000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 30000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 31000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 32000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 33000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 34000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 35000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 36000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 37000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 38000,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 39000,
+      "cur_bad": 0,
+      "best_bad": 0
+    }
+  ]
+}

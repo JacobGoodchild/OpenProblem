@@ -1,0 +1,45 @@
+{
+  "n": 16,
+  "samples_checked": 20000,
+  "heuristic_hits": 11119,
+  "num_exceptions": 9,
+  "exceptions": [
+    {
+      "n": 16,
+      "graph6": "OSObdiKB?a`Tp?SC`TJ?k"
+    },
+    {
+      "n": 16,
+      "graph6": "OIBKoa[GaIlACqiOSG_@f"
+    },
+    {
+      "n": 16,
+      "graph6": "OU`@pADB`_KPQQ`QamAPg"
+    },
+    {
+      "n": 16,
+      "graph6": "OrP?KQQG?ZbIOPJcOqPdC"
+    },
+    {
+      "n": 16,
+      "graph6": "OC_yHPq?O_gZwCBY[PCoc"
+    },
+    {
+      "n": 16,
+      "graph6": "O_C^C_FGI_ooKFyGDIaYO"
+    },
+    {
+      "n": 16,
+      "graph6": "Ol_POsCAiJEHQ_GKwcSGi"
+    },
+    {
+      "n": 16,
+      "graph6": "Oc_bT_d_agDSBETSBAa@T"
+    },
+    {
+      "n": 16,
+      "graph6": "OFgSHQFOaAb_GNqO?BjK@"
+    }
+  ],
+  "elapsed_seconds": 143.27826642990112
+}
