@@ -106,7 +106,7 @@ DeVos conjecture **false** for r=5).
 |-----|---------|-------------------|------|
 | 14  | 300     | 3     | ~1% (matches the exhaustive 0.879% closely) |
 | 16  | 420,000 | 116 | **0.0276%** (well-refined estimate) |
-| 18  | 420,000 + 400,000 more (running) | 0, then **1** (see correction below) | ~0.0001% |
+| 18  | 820,000 (+500,000 more running) | **2** (see correction below) | ~0.00024% (1 in ~410,000) |
 | 20  | **420,000** | **0** | **0%** |
 | 22  | **410,000** | **0** | **0%** |
 | 24  | **320,000** | **0** | **0%** |
@@ -130,13 +130,15 @@ nothing) — both agree, so this is a mathematically certain exception, not
 a heuristic false positive.
 
 So the real picture is **not** a hard cutoff at n=18: it's continued sharp
-decay, just faster than the n=6→16 trend alone would suggest. Rough
-rate estimate at n=18 so far: **1 exception in roughly 500,000+ samples**
-(≈0.0002%, against ≈0.028% at n=16 — a >100x drop in one step of +2
-vertices, versus roughly 3x-8x drops per step in the n=8-16 range). n=20
-through n=500 remain clean across large sample counts, consistent with the
-rate continuing to fall off a cliff — just not landing on literally zero
-at n=18 specifically. Whether it truly reaches (and stays at) zero
+decay, just faster than the n=6→16 trend alone would suggest. A second
+independent exception at n=18 turned up in a follow-up 400,000-sample
+batch, giving a much more solid rate estimate: **2 exceptions in 820,000
+samples**, roughly **1 in 410,000** (≈0.00024%, against ≈0.028% at n=16 —
+still a >100x drop across +2 vertices, versus roughly 3x-8x drops per step
+in the n=8-16 range, but now backed by two independent hits rather than
+one). n=20 through n=500 remain clean across large sample counts,
+consistent with the rate continuing to fall off a cliff — just not landing
+on literally zero at n=18 specifically. Whether it truly reaches (and stays at) zero
 somewhere close by, or the tail just keeps thinning out forever, is exactly
 the crux of the open conjecture, and this single data point doesn't settle
 it either way — if anything it's a small piece of evidence *against* a
