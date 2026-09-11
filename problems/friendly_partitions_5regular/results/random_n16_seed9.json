@@ -1,0 +1,137 @@
+{
+  "n": 16,
+  "samples_checked": 100000,
+  "heuristic_hits": 56170,
+  "num_exceptions": 32,
+  "exceptions": [
+    {
+      "n": 16,
+      "graph6": "Og?KCxcO]?aSDbn?DQ`sO"
+    },
+    {
+      "n": 16,
+      "graph6": "OiEOqCcoHT__M@ITO[cIK"
+    },
+    {
+      "n": 16,
+      "graph6": "OwP?[gwAoDe@e?hKGooa["
+    },
+    {
+      "n": 16,
+      "graph6": "Oo`HDdILIkDGS@CHoQGWT"
+    },
+    {
+      "n": 16,
+      "graph6": "OCs~?@G@`E_gK[wDALeBG"
+    },
+    {
+      "n": 16,
+      "graph6": "OIAaCvcH@aJAace@?tGSs"
+    },
+    {
+      "n": 16,
+      "graph6": "OTCNHbG@_HWBBTOYKH?ob"
+    },
+    {
+      "n": 16,
+      "graph6": "OR`X?oHGaScd_wo@qUAIa"
+    },
+    {
+      "n": 16,
+      "graph6": "OUXCkXH`a`@AKBH@?UXAY"
+    },
+    {
+      "n": 16,
+      "graph6": "OkGUAQdE_o@`LO@i_Zf?g"
+    },
+    {
+      "n": 16,
+      "graph6": "OMDGHW`qaCsc?bgIrC?eD"
+    },
+    {
+      "n": 16,
+      "graph6": "OGXP[_@GMFRA_gPSbAth?"
+    },
+    {
+      "n": 16,
+      "graph6": "OIkoKHIoOSa`cpGkGClAP"
+    },
+    {
+      "n": 16,
+      "graph6": "O?|pPCETC@cHSPo[OPS`H"
+    },
+    {
+      "n": 16,
+      "graph6": "OcAHDKQAgPzCOU[?doJgO"
+    },
+    {
+      "n": 16,
+      "graph6": "O[_gPw@IGhWDOk`_iQIcW"
+    },
+    {
+      "n": 16,
+      "graph6": "OO{__SFPEcoADWX`UCaAk"
+    },
+    {
+      "n": 16,
+      "graph6": "OCNFBGqaOH`?GVd@I@iTG"
+    },
+    {
+      "n": 16,
+      "graph6": "O]?QKWaqHGALYGa`Ar?QU"
+    },
+    {
+      "n": 16,
+      "graph6": "OAWCt@\\`ACa`aQGT}_@Kg"
+    },
+    {
+      "n": 16,
+      "graph6": "OgFPTc_@AUqAbKGLASIPH"
+    },
+    {
+      "n": 16,
+      "graph6": "Ov`_?GEApDhIMg`_GHgrA"
+    },
+    {
+      "n": 16,
+      "graph6": "OCGmAiMe?_CXoBREKQPbO"
+    },
+    {
+      "n": 16,
+      "graph6": "OREOGHPWYSWoaKi_?XpQQ"
+    },
+    {
+      "n": 16,
+      "graph6": "OS_SAVkP_KkOHPM@AJIoS"
+    },
+    {
+      "n": 16,
+      "graph6": "OkoXlIG?RDFA?[Ca_AyH`"
+    },
+    {
+      "n": 16,
+      "graph6": "OHDO\\IHS?Un?o_hG?R[@k"
+    },
+    {
+      "n": 16,
+      "graph6": "OjQ@GQ@IPt?w?[f?qOqHg"
+    },
+    {
+      "n": 16,
+      "graph6": "OBoO\\@_gUI@q?jmGIGOL`"
+    },
+    {
+      "n": 16,
+      "graph6": "Oq?gRFWJcg__CR?phSd_I"
+    },
+    {
+      "n": 16,
+      "graph6": "OYh?OpsBDA?R@dCmQgeEC"
+    },
+    {
+      "n": 16,
+      "graph6": "OODjDaPBBSISPWCFOQSOb"
+    }
+  ],
+  "elapsed_seconds": 328.2483947277069
+}
