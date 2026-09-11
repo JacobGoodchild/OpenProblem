@@ -1,0 +1,20 @@
+{
+  "n": 30,
+  "steps": 2000,
+  "seed": 1,
+  "best_heuristic_badness": 0,
+  "sat_has_friendly_partition": true,
+  "graph6": "]BGAS??`??O_C?GEGGO?D?I?K__?WPG???`W_Oc??wSGO?K_I??GG_oAQ_G?U?G_OOO@_[?OA?",
+  "history": [
+    {
+      "step": 0,
+      "cur_bad": 0,
+      "best_bad": 0
+    },
+    {
+      "step": 1000,
+      "cur_bad": 0,
+      "best_bad": 0
+    }
+  ]
+}

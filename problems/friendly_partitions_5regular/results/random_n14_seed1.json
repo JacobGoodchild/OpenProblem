@@ -1,0 +1,21 @@
+{
+  "n": 14,
+  "samples_checked": 300,
+  "heuristic_hits": 153,
+  "num_exceptions": 3,
+  "exceptions": [
+    {
+      "n": 14,
+      "graph6": "Mgd?^CTl@DjCJAc`_"
+    },
+    {
+      "n": 14,
+      "graph6": "MYY@QaED?VwMNCdo?"
+    },
+    {
+      "n": 14,
+      "graph6": "MR__zRI`XKIAeBPR?"
+    }
+  ],
+  "elapsed_seconds": 0.6106350421905518
+}
