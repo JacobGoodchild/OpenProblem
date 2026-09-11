@@ -1,0 +1,309 @@
+{
+  "n": 16,
+  "samples_checked": 300000,
+  "heuristic_hits": 168843,
+  "num_exceptions": 75,
+  "exceptions": [
+    {
+      "n": 16,
+      "graph6": "OCpobOp_dH@UAODcgPv?c"
+    },
+    {
+      "n": 16,
+      "graph6": "O@JKbb?OOpoUHqGH@qMoA"
+    },
+    {
+      "n": 16,
+      "graph6": "OEGBK_KFHREOQ`oLOhVI?"
+    },
+    {
+      "n": 16,
+      "graph6": "OD?KNPeBu?AFI?s@l@OkS"
+    },
+    {
+      "n": 16,
+      "graph6": "OQ`gU_M[H??QXB_yBPcaW"
+    },
+    {
+      "n": 16,
+      "graph6": "OVOeI@gc_@?hB[abAh`Qo"
+    },
+    {
+      "n": 16,
+      "graph6": "OHA@]Cp_gPBaLQqAZ?IGw"
+    },
+    {
+      "n": 16,
+      "graph6": "OIcaU?TYCbOOL@AhcicKo"
+    },
+    {
+      "n": 16,
+      "graph6": "OAMCWC[kAIHKWEcTSTBIC"
+    },
+    {
+      "n": 16,
+      "graph6": "OoRb@O@ckoBQQIDXCKOkP"
+    },
+    {
+      "n": 16,
+      "graph6": "O{X_P?P?owAoCZBkWIcDo"
+    },
+    {
+      "n": 16,
+      "graph6": "O?AA_QsyRgBD[Op_pW`]?"
+    },
+    {
+      "n": 16,
+      "graph6": "OSKa]Hs_OC_EQQBFIOt_W"
+    },
+    {
+      "n": 16,
+      "graph6": "OM_gG`boQcsoAQgGbOWYg"
+    },
+    {
+      "n": 16,
+      "graph6": "O_g}C_OAZIgEU?GxQOpLC"
+    },
+    {
+      "n": 16,
+      "graph6": "OA`XI_GBbAs[aogKMCS`Q"
+    },
+    {
+      "n": 16,
+      "graph6": "O?[acz_gd?_Lf_P@ASiGq"
+    },
+    {
+      "n": 16,
+      "graph6": "Og?ShTwi?giAHBaOogiTO"
+    },
+    {
+      "n": 16,
+      "graph6": "OH?LURcCU@@wCcs@cbOwo"
+    },
+    {
+      "n": 16,
+      "graph6": "OVYAHUCS?p?uARoC?ZHHE"
+    },
+    {
+      "n": 16,
+      "graph6": "OH_@MSuRAo@XSCk@o`SH`"
+    },
+    {
+      "n": 16,
+      "graph6": "O`Ek?sBPUDNO@KaACEZ_E"
+    },
+    {
+      "n": 16,
+      "graph6": "OGoPdwk?K_`qPdGIYAMCQ"
+    },
+    {
+      "n": 16,
+      "graph6": "OBiAGhcD?SiHaXiECUEE@"
+    },
+    {
+      "n": 16,
+      "graph6": "OER_R?d[`E@ICJaiPOcgD"
+    },
+    {
+      "n": 16,
+      "graph6": "O@`paA_QuGAUAybOWD`qA"
+    },
+    {
+      "n": 16,
+      "graph6": "Oo`QOASHtaCXM@QW@MIkC"
+    },
+    {
+      "n": 16,
+      "graph6": "OEF@|?caa@_JOWM@`kV?W"
+    },
+    {
+      "n": 16,
+      "graph6": "OGG]Gd@SQHCikBi_PFCpA"
+    },
+    {
+      "n": 16,
+      "graph6": "Oa?|dAHPLOGhEW?ccBisA"
+    },
+    {
+      "n": 16,
+      "graph6": "Op_b_qCU?Jp_TWWa?[_Oj"
+    },
+    {
+      "n": 16,
+      "graph6": "Oiab_cKDKQB@g[OXCp?Oj"
+    },
+    {
+      "n": 16,
+      "graph6": "OP~??\\AG[FQ@WhPCAaGcJ"
+    },
+    {
+      "n": 16,
+      "graph6": "ONo?g[?dXD?hQI_gsCjWG"
+    },
+    {
+      "n": 16,
+      "graph6": "OqAoIaOIYV@QR?GWbOlCK"
+    },
+    {
+      "n": 16,
+      "graph6": "O?chM`gZA@EGcbce?\\EGH"
+    },
+    {
+      "n": 16,
+      "graph6": "OnGP?K?_onTCRKoK@cGUH"
+    },
+    {
+      "n": 16,
+      "graph6": "Or?_xU@QGIwOcFEG@cjGQ"
+    },
+    {
+      "n": 16,
+      "graph6": "Ooj[PCoQ?JEGS`?U_VI`g"
+    },
+    {
+      "n": 16,
+      "graph6": "OLE@PGWBqBlCsO`HWOOKR"
+    },
+    {
+      "n": 16,
+      "graph6": "OQ_AC_LOYok`ioLgCqc{?"
+    },
+    {
+      "n": 16,
+      "graph6": "O`WCiaKOIccjIOd_SgOPe"
+    },
+    {
+      "n": 16,
+      "graph6": "OBROSctQHOOBgDoa@WXKW"
+    },
+    {
+      "n": 16,
+      "graph6": "Oq`@CkUK@OHQEYHIORIWg"
+    },
+    {
+      "n": 16,
+      "graph6": "O`Pq?qKKccCNBo_SOPZPA"
+    },
+    {
+      "n": 16,
+      "graph6": "OPD?t?A`WZ[@TKCpLSEWA"
+    },
+    {
+      "n": 16,
+      "graph6": "OcFAr?taGcco_RWCDGWWY"
+    },
+    {
+      "n": 16,
+      "graph6": "OPVJ?aFg_CxG[A@D`HGbP"
+    },
+    {
+      "n": 16,
+      "graph6": "OIQPCQPR?CjS?ykET_PMO"
+    },
+    {
+      "n": 16,
+      "graph6": "OVaAbXCG_DacIB?qpeAOi"
+    },
+    {
+      "n": 16,
+      "graph6": "OGGK@V@ChiXO[@`aqeAw_"
+    },
+    {
+      "n": 16,
+      "graph6": "O_\\SrADCY_@RGUg_OchGU"
+    },
+    {
+      "n": 16,
+      "graph6": "OSDCcXLF@?|OGM[A?oYEP"
+    },
+    {
+      "n": 16,
+      "graph6": "OL?_\\DCeEGITaYQ_AMHWa"
+    },
+    {
+      "n": 16,
+      "graph6": "OOAgRD_SA[eKs_ePAeST_"
+    },
+    {
+      "n": 16,
+      "graph6": "O_?kPXpE@c|?pCdOAUQCY"
+    },
+    {
+      "n": 16,
+      "graph6": "OKBgAvOP`PCUAbcOOPXoa"
+    },
+    {
+      "n": 16,
+      "graph6": "OAgXf@SauCSC?b@MK_oqE"
+    },
+    {
+      "n": 16,
+      "graph6": "O@j_K_HQ?esScSSghDbK_"
+    },
+    {
+      "n": 16,
+      "graph6": "O?McIaYAJAMQoaaQIaHIc"
+    },
+    {
+      "n": 16,
+      "graph6": "O`UgpCScCEgBQoWH?mL@K"
+    },
+    {
+      "n": 16,
+      "graph6": "OAX@AVAbClBgCgHCuALAK"
+    },
+    {
+      "n": 16,
+      "graph6": "O]?gJ_HPoobc_aggpOa@T"
+    },
+    {
+      "n": 16,
+      "graph6": "O?n@KDISQeTAWQHGQ?wha"
+    },
+    {
+      "n": 16,
+      "graph6": "OdX?XgQ?sC`LeEP@ScJ@a"
+    },
+    {
+      "n": 16,
+      "graph6": "OL?oKoEoLCHDJcQIIGkU_"
+    },
+    {
+      "n": 16,
+      "graph6": "OMp?GIeCpQHPhogDBD?ab"
+    },
+    {
+      "n": 16,
+      "graph6": "O[HKGCtCXaHGOaaaaauOg"
+    },
+    {
+      "n": 16,
+      "graph6": "OSfR?DRWS?hP@PGQbAXXO"
+    },
+    {
+      "n": 16,
+      "graph6": "O@OJGa_dQFGeiOagy_`qO"
+    },
+    {
+      "n": 16,
+      "graph6": "ObAPlA_oOYHaQwEICQGPX"
+    },
+    {
+      "n": 16,
+      "graph6": "OqC_s?TOSWGygeIM?{Bo@"
+    },
+    {
+      "n": 16,
+      "graph6": "Ow?pCaIO`SjCdSQW@x?gi"
+    },
+    {
+      "n": 16,
+      "graph6": "ODHEMAKDGUcXC[Y?]?GWM"
+    },
+    {
+      "n": 16,
+      "graph6": "ObGKlQEHCWdCOECPiQaBE"
+    }
+  ],
+  "elapsed_seconds": 621.2355487346649
+}
