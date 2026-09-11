@@ -106,7 +106,7 @@ DeVos conjecture **false** for r=5).
 |-----|---------|-------------------|------|
 | 14  | 300     | 3     | ~1% (matches the exhaustive 0.879% closely) |
 | 16  | 420,000 | 116 | **0.0276%** (well-refined estimate) |
-| 18  | 420,000 (+400,000 more running) | 0 | 0% |
+| 18  | 420,000 + 400,000 more (running) | 0, then **1** (see correction below) | ~0.0001% |
 | 20  | **420,000** | **0** | **0%** |
 | 22  | **410,000** | **0** | **0%** |
 | 24  | **320,000** | **0** | **0%** |
@@ -117,13 +117,31 @@ DeVos conjecture **false** for r=5).
 | 46, 50, 60, 80 | 15,000-30,000 each | 0 | 0% |
 | 100, 120, 150, 200, 300, 500 | 30-10,000 each | 0 | 0% |
 
-Every single size we tried from **n=18 up through n=500** — nearly **3
-million** combined random samples — came back completely clean. Not one
-exception. Meanwhile n=16, sampled just as hard (420,000 draws), keeps
-producing them at a stable, well-measured rate of about 1 in 3,600. That's
-a striking, sudden cliff: if the true n=18 rate were even remotely close to
-the n=16 rate, 420,000 samples would have turned up roughly 116 more —
-instead there are zero.
+**Correction, made live during the run (leaving this in rather than quietly
+editing it away, because it's the honest story):** we initially reported a
+"sharp cliff to exactly zero at n≥18" based on 420,000 clean samples at
+n=18 and similarly large clean samples at n=20-500. While pushing n=18
+further (looking for a bigger sample to nail the rate down precisely), a
+genuine exception turned up at sample ~80,600 of a fresh 400,000-sample
+batch. We didn't take the heuristic's word for it: we **independently
+re-verified this specific graph two ways** — the SAT oracle (UNSAT) *and*
+exact brute-force enumeration of all 2^17 bipartitions (also finds
+nothing) — both agree, so this is a mathematically certain exception, not
+a heuristic false positive.
+
+So the real picture is **not** a hard cutoff at n=18: it's continued sharp
+decay, just faster than the n=6→16 trend alone would suggest. Rough
+rate estimate at n=18 so far: **1 exception in roughly 500,000+ samples**
+(≈0.0002%, against ≈0.028% at n=16 — a >100x drop in one step of +2
+vertices, versus roughly 3x-8x drops per step in the n=8-16 range). n=20
+through n=500 remain clean across large sample counts, consistent with the
+rate continuing to fall off a cliff — just not landing on literally zero
+at n=18 specifically. Whether it truly reaches (and stays at) zero
+somewhere close by, or the tail just keeps thinning out forever, is exactly
+the crux of the open conjecture, and this single data point doesn't settle
+it either way — if anything it's a small piece of evidence *against* a
+clean finite cutoff, since exceptions keep appearing exactly where we
+almost convinced ourselves they'd stopped.
 
 The n=16 exceptions are genuine, SAT-verified (not heuristic artifacts),
 and **0 out of 120,000** independent random samples at n=18 and again at
@@ -183,16 +201,15 @@ computationally, to our own satisfaction:
   exceptions at n=16** (rate ≈0.034%, consistent with the decaying trend),
   giving very strong, structurally-characterized (see above) real examples
   right at the current edge of what's computationally checkable exhaustively.
-- **From n=18 all the way up to n=500, across over a million combined
-  random samples, we found zero exceptions.** That's a sharp, sudden drop
-  from a measurable ~0.03-1% rate at n≤16 to nothing detectable at n≥18 —
-  much sharper than the smooth decay from n=6 to n=16 would suggest. That
-  asymmetry is itself the most interesting thing we found: it's consistent
-  with a genuinely finite exception set that simply stops somewhere in
-  [16, 18], but it's equally consistent with an ever-rarer population that
-  a million samples still isn't enough to detect at these sizes (the space
-  of 5-regular graphs on 500 vertices is astronomically larger than a
-  couple thousand samples can meaningfully cover).
+- **The rate keeps dropping past n=16, but does not hit a hard wall at
+  n=18.** After ~800,000 combined samples at n=18 came back clean, one
+  genuine, doubly-verified (SAT + exact brute force) exception turned up —
+  see the correction above. So the exception rate falls off a cliff
+  between n=16 (~0.028%) and n=18 (roughly 100x rarer, ~1 in half a
+  million so far), but it is not exactly zero. n=20 through n=500 remain
+  completely clean across large sample counts (though at these low
+  implied rates, our sample sizes there are no longer strong evidence of
+  anything — see below).
 - Adversarial graph-space SA (see below) never found a hard instance at
   any size we tried — it has no discoverable "gradient" toward whatever
   makes a graph an exception, reinforcing that these are structurally
@@ -200,13 +217,14 @@ computationally, to our own satisfaction:
 
 **Bottom line:** we did not prove or disprove DeVos's conjecture for r=5,
 but we pushed the *exhaustive* frontier from n=12 to n=14, and the
-*empirical* frontier (confirmed real exceptions) to n=16 — plus a strong
-negative result (zero exceptions in a million+ samples) from n=18 to 500.
-If a professional graph theorist wanted to pick this up, the natural next
-questions are exactly the ones this data poses: is there truly a sharp
-cutoff around n=16-18, and if so, why — what structural argument would
-prove no 5-regular graph beyond some fixed size can lack a friendly
-partition?
+*empirical* frontier (confirmed real exceptions) to n=18 — with the rate
+continuing to plunge (roughly 100x per +2 vertices between n=16 and n=18,
+versus 3-8x per step below that) rather than cutting off cleanly. If a
+professional graph theorist wanted to pick this up, the natural next
+question is exactly the one this data poses: does the rate keep dropping
+forever without ever truly reaching zero (which would mean infinitely many
+exceptions, and the conjecture is **false**), or does it hit an honest
+floor of zero at some finite n we haven't reached — and either way, why?
 
 **What would move this forward:** (a) a smarter, non-random search
 strategy for n=18-30 specifically (the data suggests this is the most
