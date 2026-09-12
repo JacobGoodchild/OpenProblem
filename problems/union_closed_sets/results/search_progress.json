@@ -1,0 +1,156 @@
+{
+  "13": {
+    "best_ratio": 0.5,
+    "trials": 1679,
+    "generators": [
+      0,
+      2176,
+      1634,
+      2176
+    ],
+    "k_generators": 4
+  },
+  "14": {
+    "best_ratio": 0.5,
+    "trials": 1592,
+    "generators": [
+      8513,
+      0,
+      656,
+      8
+    ],
+    "k_generators": 4
+  },
+  "15": {
+    "best_ratio": 0.5,
+    "trials": 756,
+    "generators": [
+      16424,
+      0,
+      2048,
+      4097,
+      576
+    ],
+    "k_generators": 5
+  },
+  "16": {
+    "best_ratio": 0.5,
+    "trials": 714,
+    "generators": [
+      1,
+      0,
+      152,
+      1024,
+      53250
+    ],
+    "k_generators": 5
+  },
+  "17": {
+    "best_ratio": 0.5,
+    "trials": 649,
+    "generators": [
+      2,
+      3232,
+      333,
+      16384,
+      0
+    ],
+    "k_generators": 5
+  },
+  "18": {
+    "best_ratio": 0.5,
+    "trials": 284,
+    "generators": [
+      1026,
+      65536,
+      33,
+      32904,
+      4160,
+      0
+    ],
+    "k_generators": 6
+  },
+  "19": {
+    "best_ratio": 0.5,
+    "trials": 262,
+    "generators": [
+      16385,
+      393216,
+      81830,
+      0,
+      16,
+      64
+    ],
+    "k_generators": 6
+  },
+  "20": {
+    "best_ratio": 0.5,
+    "trials": 246,
+    "generators": [
+      788480,
+      1,
+      69778,
+      34056,
+      0,
+      139264
+    ],
+    "k_generators": 6
+  },
+  "21": {
+    "best_ratio": 0.5079365079365079,
+    "trials": 108,
+    "generators": [
+      1572864,
+      2440,
+      8192,
+      131072,
+      262144,
+      131072,
+      4
+    ],
+    "k_generators": 7
+  },
+  "22": {
+    "best_ratio": 0.5,
+    "trials": 99,
+    "generators": [
+      147972,
+      32904,
+      2304,
+      8192,
+      0,
+      4096,
+      1049602
+    ],
+    "k_generators": 7
+  },
+  "23": {
+    "best_ratio": 0.5555555555555556,
+    "trials": 94,
+    "generators": [
+      0,
+      131088,
+      7296913,
+      66560,
+      2097152,
+      1065088,
+      524902
+    ],
+    "k_generators": 7
+  },
+  "24": {
+    "best_ratio": 0.6461538461538462,
+    "trials": 41,
+    "generators": [
+      16,
+      514,
+      4194308,
+      524288,
+      3901787,
+      4194304,
+      535828,
+      1048576
+    ],
+    "k_generators": 8
+  }
+}
