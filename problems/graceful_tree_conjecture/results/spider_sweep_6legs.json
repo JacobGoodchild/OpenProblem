@@ -1,0 +1,134 @@
+{
+  "args": {
+    "num_long_legs": 6,
+    "long_total_min": 12,
+    "long_total_max": 14,
+    "min_leg_len": 2,
+    "ones_counts": [
+      0,
+      3
+    ],
+    "max_partitions_per_total": 30
+  },
+  "checked": 8,
+  "unresolved": [],
+  "elapsed": 2.0476932525634766,
+  "all_results_summary": [
+    {
+      "legs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 13,
+      "found": true,
+      "method": "backtracking"
+    },
+    {
+      "legs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "n": 16,
+      "found": true,
+      "method": "backtracking"
+    },
+    {
+      "legs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
+      ],
+      "n": 14,
+      "found": true,
+      "method": "backtracking"
+    },
+    {
+      "legs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        1,
+        1,
+        1
+      ],
+      "n": 17,
+      "found": true,
+      "method": "backtracking"
+    },
+    {
+      "legs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "n": 15,
+      "found": true,
+      "method": "backtracking"
+    },
+    {
+      "legs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        4,
+        1,
+        1,
+        1
+      ],
+      "n": 18,
+      "found": true,
+      "method": "backtracking"
+    },
+    {
+      "legs": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        3
+      ],
+      "n": 15,
+      "found": true,
+      "method": "backtracking"
+    },
+    {
+      "legs": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        1,
+        1,
+        1
+      ],
+      "n": 18,
+      "found": true,
+      "method": "local_search"
+    }
+  ]
+}

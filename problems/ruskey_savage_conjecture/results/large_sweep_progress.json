@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "6": {
+      "trials": 3000,
+      "sat_confirmed": 3000,
+      "still_flagged": 0,
+      "min_iters": 1,
+      "max_iters_seen": 13,
+      "elapsed": 11.110522508621216
+    },
+    "7": {
+      "trials": 3000,
+      "sat_confirmed": 3000,
+      "still_flagged": 0,
+      "min_iters": 1,
+      "max_iters_seen": 12,
+      "elapsed": 26.997173309326172
+    },
+    "8": {
+      "trials": 3000,
+      "sat_confirmed": 3000,
+      "still_flagged": 0,
+      "min_iters": 1,
+      "max_iters_seen": 15,
+      "elapsed": 70.22420072555542
+    }
+  },
+  "flagged": []
+}
