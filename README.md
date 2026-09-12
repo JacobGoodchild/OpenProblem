@@ -47,9 +47,11 @@ the general playbook used here is:
 |---|---|---|
 | Friendly (internal) partitions of 5-regular graphs | see write-up | [`problems/friendly_partitions_5regular/FINDINGS.md`](problems/friendly_partitions_5regular/FINDINGS.md) |
 | Seymour's Second Neighborhood Conjecture (oriented graphs) | see write-up | [`problems/second_neighborhood_conjecture/FINDINGS.md`](problems/second_neighborhood_conjecture/FINDINGS.md) |
+| Tuza's Conjecture (triangle packing vs. covering) | see write-up | [`problems/tuzas_conjecture/FINDINGS.md`](problems/tuzas_conjecture/FINDINGS.md) |
 
 ## Environment
 
-Python 3.11, `networkx`, `numpy`, `python-sat` (Glucose backend), and the
+Python 3.11, `networkx`, `numpy`, `python-sat` (Glucose backend), `pulp`
+(bundled CBC solver, used for exact integer-programming oracles), and the
 `nauty` package (`nauty-geng`) for exhaustive small-graph generation. All
 code is pure computation — no destructive or unsafe operations.
