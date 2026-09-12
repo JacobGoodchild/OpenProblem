@@ -61,6 +61,7 @@ the general playbook used here is:
 | The classical multicolor Ramsey number R(3,3,3,3) | see write-up (negative result, pure-circulant search reached n=41 vs. known record 50) | [`problems/ramsey_3_3_3_3/FINDINGS.md`](problems/ramsey_3_3_3_3/FINDINGS.md) |
 | The Ramsey number R(5,6) | see write-up (negative result, pure-circulant search reached n=52 vs. known record 58) | [`problems/ramsey_5_6/FINDINGS.md`](problems/ramsey_5_6/FINDINGS.md) |
 | The classical multicolor Ramsey number R(4,4,4) | see write-up (reproduced the real 127-vertex record from number theory; exhaustive cyclotomic search to 20,000 found no larger witness) | [`problems/ramsey_4_4_4/FINDINGS.md`](problems/ramsey_4_4_4/FINDINGS.md) |
+| Cyclotomic construction sweep across 5 open Ramsey numbers | see write-up (exactly reproduced R(6,6)'s 101-vertex record via the Paley graph mod 101; no new records) | [`problems/cyclotomic_sweep/FINDINGS.md`](problems/cyclotomic_sweep/FINDINGS.md) |
 
 ## Environment
 
