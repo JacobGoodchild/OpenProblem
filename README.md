@@ -53,6 +53,7 @@ the general playbook used here is:
 | Van der Waerden number W(2,7) | see write-up (method didn't scale) | [`problems/vdw_2_7/FINDINGS.md`](problems/vdw_2_7/FINDINGS.md) |
 | The Ramsey number R(4,6) | see write-up | [`problems/ramsey_4_6/FINDINGS.md`](problems/ramsey_4_6/FINDINGS.md) |
 | The Ramsey number R(4,7) | see write-up (partial, 3.5% coverage) | [`problems/ramsey_4_7/FINDINGS.md`](problems/ramsey_4_7/FINDINGS.md) |
+| Schur number S(6) | see write-up (no attempt made, method didn't scale) | [`problems/schur_6/FINDINGS.md`](problems/schur_6/FINDINGS.md) |
 
 ## Environment
 
