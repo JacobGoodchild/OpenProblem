@@ -58,6 +58,25 @@ def random_graph(n, p, rng):
     return G
 
 
+def clique_union_graph(n, clique_size, rng):
+    """Build a graph on n vertices as a disjoint union of K_{clique_size}
+    cliques (the known ratio-2-tight construction), with any leftover
+    vertices (n not a multiple of clique_size) wired into a partial clique
+    or attached as isolated extras. Used as an SA seed to search the
+    neighbourhood of the known extremal examples for any local perturbation
+    that pushes the ratio above 2."""
+    G = nx.Graph()
+    G.add_nodes_from(range(n))
+    i = 0
+    while i < n:
+        block = list(range(i, min(i + clique_size, n)))
+        for a in range(len(block)):
+            for b in range(a + 1, len(block)):
+                G.add_edge(block[a], block[b])
+        i += clique_size
+    return G
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('n', type=int, help='number of vertices')
@@ -67,6 +86,10 @@ def main():
     ap.add_argument('--restarts', type=int, default=1)
     ap.add_argument('--verify-threshold', type=float, default=1.85,
                      help='re-verify with exact ILP when heuristic ratio exceeds this')
+    ap.add_argument('--init', choices=['random', 'clique4', 'clique5'], default='random',
+                     help='SA seed: uniform random graph, or a disjoint union of '
+                          'K4/K5 cliques (the known ratio-2-tight construction) to '
+                          'search the neighbourhood of the known extremal examples')
     args = ap.parse_args()
 
     n = args.n
@@ -84,7 +107,12 @@ def main():
     total_steps = 0
 
     for restart in range(args.restarts):
-        G = random_graph(n, args.init_p, rng)
+        if args.init == 'clique4':
+            G = clique_union_graph(n, 4, rng)
+        elif args.init == 'clique5':
+            G = clique_union_graph(n, 5, rng)
+        else:
+            G = random_graph(n, args.init_p, rng)
         cur_score, _, _ = heuristic_ratio(G)
         best_score = cur_score
         best_G = G.copy()

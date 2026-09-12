@@ -1,0 +1,10 @@
+{
+  "n": 20,
+  "total_steps": 30000,
+  "restarts": 1,
+  "best_heuristic_ratio": 1.8148148148148149,
+  "best_graph6": "SGF{xRkkfkmavg~v}F{cST?W\\HZ\\MbrMk",
+  "exact_verified_candidates": [],
+  "counterexamples": [],
+  "elapsed_seconds": 177.5682888031006
+}
