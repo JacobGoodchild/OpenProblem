@@ -57,6 +57,7 @@ the general playbook used here is:
 | Multicolor Ramsey number R(3,3,5) | see write-up (found R(3,3,5)>=42, comparison to literature record unconfirmed) | [`problems/ramsey_3_3_5/FINDINGS.md`](problems/ramsey_3_3_5/FINDINGS.md) |
 | The Ramsey number R(5,5) | see write-up (negative result, pure-circulant search fell 1 short of the known record) | [`problems/ramsey_5_5/FINDINGS.md`](problems/ramsey_5_5/FINDINGS.md) |
 | The Ramsey number R(3,11) | see write-up (partial, 12-24% coverage) | [`problems/ramsey_3_11/FINDINGS.md`](problems/ramsey_3_11/FINDINGS.md) |
+| The Ramsey number R(6,6) | see write-up (negative result, pure-circulant search reached n=62 vs. known record 101) | [`problems/ramsey_6_6/FINDINGS.md`](problems/ramsey_6_6/FINDINGS.md) |
 
 ## Environment
 
