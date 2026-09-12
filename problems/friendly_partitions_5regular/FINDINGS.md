@@ -190,14 +190,15 @@ DeVos conjecture **false** for r=5).
 | 180 | 40,000  | 0 | 0% |
 | 182 | 40,000  | 0 | 0% |
 | 190 | 40,000  | 0 | 0% |
+| 200 | 40,000  | 0 | 0% |
 | 300, 500 | 30-8,000 each | 0 | 0% |
 
-Total across n≥20: well over **17 million** random samples, zero
+Total across n≥20: well over **17.5 million** random samples, zero
 exceptions found anywhere. The clean run now extends unbroken and
 densely-sampled (40,000-120,000 independent draws per even n, no gaps)
-all the way from n=20 through n=182, plus n=190, plus lighter spot-checks
-out to n=500. From here the step size widens (190, 200, 210, ...) since
-n=20-182 is now fully covered with no gaps.
+all the way from n=20 through n=182, plus n=190 and n=200, plus lighter
+spot-checks out to n=500. From here the step size widens (210, 220, ...)
+since n=20-182 is now fully covered with no gaps.
 
 **Correction, made live during the run (leaving this in rather than quietly
 editing it away, because it's the honest story):** we initially reported a
