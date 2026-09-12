@@ -1,9 +1,39 @@
 {
   "summary": {
-    "9": {
-      "best_filter_score_achieved": 0,
-      "trials": 2,
-      "elapsed": 0.29958677291870117
+    "10": {
+      "best_filter_score_achieved": 3,
+      "trials": 25,
+      "elapsed": 33.16410708427429
+    },
+    "11": {
+      "best_filter_score_achieved": 2,
+      "trials": 25,
+      "elapsed": 29.358222484588623
+    },
+    "12": {
+      "best_filter_score_achieved": 3,
+      "trials": 25,
+      "elapsed": 41.86655879020691
+    },
+    "13": {
+      "best_filter_score_achieved": 2,
+      "trials": 25,
+      "elapsed": 50.2890465259552
+    },
+    "14": {
+      "best_filter_score_achieved": 3,
+      "trials": 25,
+      "elapsed": 80.36476969718933
+    },
+    "15": {
+      "best_filter_score_achieved": 3,
+      "trials": 25,
+      "elapsed": 78.95047450065613
+    },
+    "16": {
+      "best_filter_score_achieved": 3,
+      "trials": 25,
+      "elapsed": 145.4243803024292
     }
   },
   "full_candidates": []
