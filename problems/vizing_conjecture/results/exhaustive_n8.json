@@ -1,0 +1,18 @@
+{
+  "n": 8,
+  "min_gamma": 4,
+  "checked": 11117,
+  "gamma_histogram": {
+    "1": 1044,
+    "2": 9162,
+    "3": 905,
+    "4": 6
+  },
+  "survivors_count": 6,
+  "candidates": [
+    {
+      "graph6": "G?bDKk",
+      "gamma": 4
+    }
+  ]
+}

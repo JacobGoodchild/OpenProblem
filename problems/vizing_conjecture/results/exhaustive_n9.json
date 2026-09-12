@@ -1,0 +1,22 @@
+{
+  "n": 9,
+  "min_gamma": 4,
+  "checked": 261080,
+  "gamma_histogram": {
+    "1": 12346,
+    "2": 219823,
+    "3": 28720,
+    "4": 191
+  },
+  "survivors_count": 191,
+  "candidates": [
+    {
+      "graph6": "H?`DEeV",
+      "gamma": 4
+    },
+    {
+      "graph6": "H?`bCbd",
+      "gamma": 4
+    }
+  ]
+}
