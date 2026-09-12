@@ -1,0 +1,20 @@
+{
+  "n": 13,
+  "total_steps": 500000,
+  "restarts": 5,
+  "best_heuristic_ratio": 2.125,
+  "best_graph6": "LTtRtj}HhlHUI?",
+  "exact_verified_candidates": [
+    {
+      "restart": 4,
+      "step": 77195,
+      "heuristic_ratio": 2.125,
+      "tau": 12.0,
+      "nu": 10.0,
+      "exact_ratio": 1.2,
+      "graph6": "LTtRtj}HhlHUI?"
+    }
+  ],
+  "counterexamples": [],
+  "elapsed_seconds": 647.8344311714172
+}
