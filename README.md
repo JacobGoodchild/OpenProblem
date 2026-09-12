@@ -64,6 +64,7 @@ the general playbook used here is:
 | Cyclotomic construction sweep across 5 open Ramsey numbers | see write-up (exactly reproduced R(6,6)'s 101-vertex record via the Paley graph mod 101; no new records) | [`problems/cyclotomic_sweep/FINDINGS.md`](problems/cyclotomic_sweep/FINDINGS.md) |
 | The union-closed sets conjecture (Frankl, 1979) | see write-up (no counterexample; negative result, honestly scoped) | [`problems/union_closed_sets/FINDINGS.md`](problems/union_closed_sets/FINDINGS.md) |
 | Generalized Ulam (1-additive) sequence periodicity | see write-up (fresh classification sweep; caught and fixed a false-positive bug in our own detector along the way) | [`problems/ulam_sequences/FINDINGS.md`](problems/ulam_sequences/FINDINGS.md) |
+| Sequenceable groups (Keedwell's conjecture), order 33+ | see write-up (abandoned mid-investigation, partial data only) | [`problems/sequenceable_groups/FINDINGS.md`](problems/sequenceable_groups/FINDINGS.md) |
 
 ## Environment
 
