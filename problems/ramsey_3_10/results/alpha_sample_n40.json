@@ -1,0 +1,21 @@
+{
+  "n": 40,
+  "sample_size": 1000,
+  "min_alpha_found": 10.0,
+  "min_alpha_example": {
+    "S": [
+      3,
+      4,
+      9,
+      15,
+      17
+    ],
+    "alpha": 10.0
+  },
+  "alpha_distribution_summary": {
+    "min": 10.0,
+    "max": 20.0,
+    "mean": 15.237
+  },
+  "elapsed_seconds": 47.95865774154663
+}

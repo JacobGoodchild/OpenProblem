@@ -48,6 +48,7 @@ the general playbook used here is:
 | Friendly (internal) partitions of 5-regular graphs | see write-up | [`problems/friendly_partitions_5regular/FINDINGS.md`](problems/friendly_partitions_5regular/FINDINGS.md) |
 | Seymour's Second Neighborhood Conjecture (oriented graphs) | see write-up | [`problems/second_neighborhood_conjecture/FINDINGS.md`](problems/second_neighborhood_conjecture/FINDINGS.md) |
 | Tuza's Conjecture (triangle packing vs. covering) | see write-up | [`problems/tuzas_conjecture/FINDINGS.md`](problems/tuzas_conjecture/FINDINGS.md) |
+| The Ramsey number R(3,10) | see write-up | [`problems/ramsey_3_10/FINDINGS.md`](problems/ramsey_3_10/FINDINGS.md) |
 
 ## Environment
 
