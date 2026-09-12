@@ -206,15 +206,28 @@ establish computationally, to our own satisfaction:
 
 **Bottom line:** everything we found is consistent with Tuza's conjecture
 being true, and consistent with `K4`/`K5`-based clique unions being the
-*only* extremal structure (a natural, if unproven, guess given how
-comfortably every other family and every adversarial search stayed well
-clear of the bound). This doesn't move the needle on the actual open
+*only* extremal structure. This doesn't move the needle on the actual open
 question — closing the gap between the conjectured bound of 2 and the best
 proven general bound of 66/23 ≈ 2.87 is a genuinely hard problem that has
-resisted expert attack for over 40 years — but it's an honest, rigorous
-computational data point: at every scale we could exactly verify, and
-every scale we could search adversarially, the conjecture holds with the
-bound never approached from outside by even a small margin.
+resisted expert attack for over 40 years.
+
+**A more honest self-assessment than the above:** the exhaustive check up
+to n=9 and the small structured-family sweep are not, on reflection, a
+serious research contribution — small cases of a 40-year-old, actively
+studied conjecture are exactly the kind of thing that has already been
+checked by hand or by many other people's code long before this session,
+and finding nothing there is the expected, unsurprising outcome, not
+evidence of anything new. The one piece of this investigation with any
+real (if modest) originality is the clique-seeded adversarial search: it
+specifically tests whether the *known* extremal examples sit at an
+isolated local peak or next to something worse, which is a slightly
+different question than "does the bound hold" and isn't something we found
+already answered in the literature we checked. Everything else here is
+solid, correctly-implemented, but low-novelty verification. Future work on
+this problem should skip re-deriving small cases entirely and go straight
+at a specific published open sub-question or an un-checked construction
+(see below) rather than repeating brute-force checks that add confidence
+in the fourth decimal place to something already very well established.
 
 **What would move this forward:** (a) push the exhaustive frontier to
 n=10 with more compute/time than we allotted here (~1.5 days estimated at
