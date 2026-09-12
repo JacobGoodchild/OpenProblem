@@ -1,0 +1,97 @@
+{
+  "R(5,5)": {
+    "clique_sizes": [
+      5,
+      5
+    ],
+    "p_range": [
+      20,
+      5000
+    ],
+    "eligible_primes_checked": 326,
+    "found_primes": [
+      29,
+      37
+    ],
+    "known_record": 42,
+    "improves_on_record": false,
+    "elapsed_seconds": 0.4039311408996582
+  },
+  "R(6,6)": {
+    "clique_sizes": [
+      6,
+      6
+    ],
+    "p_range": [
+      20,
+      5000
+    ],
+    "eligible_primes_checked": 326,
+    "found_primes": [
+      29,
+      37,
+      41,
+      53,
+      61,
+      73,
+      89,
+      101
+    ],
+    "known_record": 101,
+    "improves_on_record": false,
+    "elapsed_seconds": 0.4544715881347656
+  },
+  "R(3,11)": {
+    "clique_sizes": [
+      3,
+      11
+    ],
+    "p_range": [
+      10,
+      5000
+    ],
+    "eligible_primes_checked": 328,
+    "found_primes": [],
+    "known_record": 46,
+    "improves_on_record": false,
+    "elapsed_seconds": 0.41075730323791504
+  },
+  "R(5,6)": {
+    "clique_sizes": [
+      5,
+      6
+    ],
+    "p_range": [
+      20,
+      5000
+    ],
+    "eligible_primes_checked": 326,
+    "found_primes": [
+      29,
+      37
+    ],
+    "known_record": 58,
+    "improves_on_record": false,
+    "elapsed_seconds": 0.41289353370666504
+  },
+  "R(3,3,3,3)": {
+    "clique_sizes": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "p_range": [
+      10,
+      5000
+    ],
+    "eligible_primes_checked": 161,
+    "found_primes": [
+      17,
+      41
+    ],
+    "known_record": 50,
+    "improves_on_record": false,
+    "elapsed_seconds": 0.23876190185546875
+  }
+}
