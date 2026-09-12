@@ -52,6 +52,7 @@ the general playbook used here is:
 | Snake-in-the-box (longest induced path in the hypercube) | see write-up (negative result) | [`problems/snake_in_the_box/FINDINGS.md`](problems/snake_in_the_box/FINDINGS.md) |
 | Van der Waerden number W(2,7) | see write-up (method didn't scale) | [`problems/vdw_2_7/FINDINGS.md`](problems/vdw_2_7/FINDINGS.md) |
 | The Ramsey number R(4,6) | see write-up | [`problems/ramsey_4_6/FINDINGS.md`](problems/ramsey_4_6/FINDINGS.md) |
+| The Ramsey number R(4,7) | see write-up (partial, 3.5% coverage) | [`problems/ramsey_4_7/FINDINGS.md`](problems/ramsey_4_7/FINDINGS.md) |
 
 ## Environment
 

@@ -1,0 +1,11 @@
+{
+  "n": 48,
+  "target_indep": 7,
+  "total_candidates": 334411,
+  "checked": 11743,
+  "coverage_fraction": 0.03511547168005837,
+  "found": [],
+  "inconclusive_count": 0,
+  "elapsed_seconds": 900.4867737293243,
+  "partial": true
+}
