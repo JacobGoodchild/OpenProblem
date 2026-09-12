@@ -375,6 +375,19 @@ hard instances across every size tried — worth trying vertex-based
 rewiring, or a "grow a known n=16 exception by 2 vertices" constructive
 move instead of pure edge-swaps.
 
+**Stopping point.** After the initial discoveries above, the random
+sampling was left running and mechanically extended out to n=1600 (39.5M+
+total samples, all clean past n=18). That extension past roughly n=100 or
+so added confidence in the second decimal place at best — once you've
+seen a thousand straight zeros, the next thousand don't tell you anything
+qualitatively new, and uniform random sampling was never going to find
+another rare exception once the implied rate dropped below 1/sample-count
+(see (a) above). Continuing to add larger and larger n without a smarter
+search strategy was the wrong use of compute; the honest state of the
+investigation is exactly what it was after the n=16/n=18 discoveries and
+the adversarial-search negative result. This project has moved on to a
+different open problem rather than continuing to extend this frontier.
+
 ## Reproducing
 
 ```
