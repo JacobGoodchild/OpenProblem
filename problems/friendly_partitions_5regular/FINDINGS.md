@@ -229,14 +229,16 @@ DeVos conjecture **false** for r=5).
 | 850 | 8,000   | 0 | 0% |
 | 900 | 8,000   | 0 | 0% |
 | 950 | 8,000   | 0 | 0% |
+| 1000 | 8,000  | 0 | 0% |
 
-Total across n≥20: well over **36 million** random samples, zero
+Total across n≥20: well over **36.5 million** random samples, zero
 exceptions found anywhere. The clean run now extends unbroken and
 densely-sampled (6,000-120,000 independent draws per even n, no gaps)
 all the way from n=20 through n=182, plus n=190, 200, 210, 220, 230, 240,
 250, 260, 270, 280, 290, 300, 320, 340, 360, 380, 400, 420, 440, 460, 480,
 500, 520, 540, 560, 580, 600, 620, 640, 660, 680, 700, 720, 740, 760, 780,
-800, 850, 900, 950.
+800, 850, 900, 950, **1000** — a full order of magnitude past where the
+run began pushing the frontier.
 
 **Correction, made live during the run (leaving this in rather than quietly
 editing it away, because it's the honest story):** we initially reported a
