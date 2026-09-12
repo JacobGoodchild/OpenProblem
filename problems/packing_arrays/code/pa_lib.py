@@ -53,6 +53,17 @@ def build_pa_cnf(N, k, g):
             enc = CardEnc.atmost(lits=lits, bound=1, vpool=vpool, encoding=EncType.seqcounter)
             clauses.extend(enc.clauses)
 
+    # SYMMETRY BREAKING: each column can be independently relabeled
+    # (permuting the g symbols within a single column never changes
+    # whether the packing property holds, since it only depends on
+    # distinctness of pairs) -- so WLOG fix row 0 to be all-zeros. This
+    # is essential in practice: without it, generic CDCL solvers get
+    # lost in the enormous g^k-fold symmetric search space and can take
+    # 100+ seconds even on modest instance sizes (confirmed empirically).
+    if N >= 1:
+        for c in range(k):
+            clauses.append([xvar(0, c, 0)])
+
     # packing constraint: for every column pair, every symbol pair,
     # at most one row matches both
     for c1, c2 in itertools.combinations(range(k), 2):
