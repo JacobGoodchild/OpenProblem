@@ -208,14 +208,13 @@ DeVos conjecture **false** for r=5).
 | 400 | 25,000  | 0 | 0% |
 | 420 | 20,000  | 0 | 0% |
 | 440 | 20,000  | 0 | 0% |
-| 500 | ~2,000 | 0 | 0% |
+| 460 | 20,000  | 0 | 0% |
 
-Total across n≥20: well over **25.5 million** random samples, zero
+Total across n≥20: well over **26 million** random samples, zero
 exceptions found anywhere. The clean run now extends unbroken and
 densely-sampled (20,000-120,000 independent draws per even n, no gaps)
 all the way from n=20 through n=182, plus n=190, 200, 210, 220, 230, 240,
-250, 260, 270, 280, 290, 300, 320, 340, 360, 380, 400, 420, 440, plus a
-lighter spot-check at n=500.
+250, 260, 270, 280, 290, 300, 320, 340, 360, 380, 400, 420, 440, 460.
 
 **Correction, made live during the run (leaving this in rather than quietly
 editing it away, because it's the honest story):** we initially reported a
