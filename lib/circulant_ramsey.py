@@ -60,6 +60,41 @@ def is_triangle_free(S, n):
     return True
 
 
+def is_clique_free(S, n, s):
+    """Check whether the circulant graph C_n(S) has no clique of size s
+    (generalizes is_triangle_free, which is the s=3 case). By vertex-
+    transitivity it suffices to check whether there exist s-1 elements of
+    D = difference_set(S,n) (the "neighbors of vertex 0") that are
+    pairwise also related by an element of D -- i.e. a clique of size s-1
+    within D's own "graph structure" (D as a vertex set, with the same
+    connection rule) union vertex 0 gives a clique of size s.
+
+    Implemented via straightforward backtracking over D (size is at most
+    n-1, but for the graphs of interest here |D| is small, so this is
+    fast) -- looking for s-1 mutually D-connected elements."""
+    D = difference_set(S, n)
+    D_list = sorted(D)
+
+    def extends(clique, cand):
+        for c in clique:
+            diff = (cand - c) % n
+            if diff not in D and (n - diff) % n not in D:
+                return False
+        return True
+
+    def backtrack(start_idx, clique):
+        if len(clique) == s - 1:
+            return True
+        for i in range(start_idx, len(D_list)):
+            cand = D_list[i]
+            if extends(clique, cand):
+                if backtrack(i + 1, clique + [cand]):
+                    return True
+        return False
+
+    return not backtrack(0, [])
+
+
 def circulant_edges(S, n):
     D = difference_set(S, n)
     edges = []
