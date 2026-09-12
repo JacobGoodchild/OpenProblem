@@ -67,6 +67,9 @@ the general playbook used here is:
 | Sequenceable groups (Keedwell's conjecture), order 33+ | see write-up (abandoned mid-investigation, partial data only) | [`problems/sequenceable_groups/FINDINGS.md`](problems/sequenceable_groups/FINDINGS.md) |
 | Bermond-Thomassen conjecture, k=4 (4 disjoint directed cycles from out-degree 7) | see write-up (no counterexample; exact tight n=9 example found, consistent with the conjecture) | [`problems/bermond_thomassen_k4/FINDINGS.md`](problems/bermond_thomassen_k4/FINDINGS.md) |
 | Vizing's conjecture (domination number of Cartesian products) | see write-up (exhaustive n=8,9: only 3 graphs pass every necessary condition, none violates the inequality against ~19 test graphs) | [`problems/vizing_conjecture/FINDINGS.md`](problems/vizing_conjecture/FINDINGS.md) |
+| The Ruskey-Savage conjecture (hypercube matchings extend to Hamiltonian cycles) | see write-up (29,000 matchings tested at Q6-Q8, all extend; extends the computational frontier past MathCheck 2015's n=5) | [`problems/ruskey_savage_conjecture/FINDINGS.md`](problems/ruskey_savage_conjecture/FINDINGS.md) |
+| Graceful tree conjecture (Ringel-Kotzig) - spider gap past n=35 | see write-up (in progress, stopped mid-investigation) | [`problems/graceful_tree_conjecture/FINDINGS.md`](problems/graceful_tree_conjecture/FINDINGS.md) |
+| Rainbow Arborescence Conjecture (Dec 2024) | see write-up (large-scale sweep n=10-70; caught and fixed a real verification bug along the way) | [`problems/rainbow_arborescence/FINDINGS.md`](problems/rainbow_arborescence/FINDINGS.md) |
 
 ## Environment
 
