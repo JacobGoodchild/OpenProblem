@@ -1,0 +1,10 @@
+{
+  "n": 40,
+  "target_indep": 10,
+  "total_candidates": 4522,
+  "checked": 4522,
+  "found": [],
+  "inconclusive_count": 0,
+  "inconclusive": [],
+  "elapsed_seconds": 212.91275906562805
+}
