@@ -27,7 +27,7 @@ from graceful_lib import (make_spider, spider_partitions, find_graceful_labeling
                            find_graceful_local_search_restarts, verify_graceful_labeling)
 
 
-def try_find(legs, bt_budget=150_000, ls_trials=8, ls_iters=80_000, seed=0):
+def try_find(legs, bt_budget=150_000, ls_trials=30, ls_iters=300_000, seed=0):
     G = make_spider(legs)
     n = G.number_of_nodes()
     import random
@@ -77,9 +77,19 @@ def main():
                 r = try_find(legs, seed=checked)
                 all_results.append(r)
                 if not r['found']:
-                    unresolved.append(r)
-                    print(f'*** NOT FOUND (both methods): legs={legs} n={r["n"]} '
-                          f'best_dup={r.get("best_dup")} ***', flush=True)
+                    # escalate immediately with a much bigger budget before
+                    # ever reporting a flag -- confirmed empirically that
+                    # the "default" search power alone produces false
+                    # positives (search weakness, not real difficulty)
+                    r_esc = try_find(legs, bt_budget=300_000, ls_trials=40,
+                                      ls_iters=600_000, seed=checked + 777777)
+                    if r_esc['found']:
+                        r = r_esc
+                        all_results[-1] = r
+                    else:
+                        unresolved.append(r_esc)
+                        print(f'*** NOT FOUND (both methods, INCLUDING escalated recheck): '
+                              f'legs={legs} n={r["n"]} best_dup={r_esc.get("best_dup")} ***', flush=True)
                 if checked % 25 == 0:
                     elapsed = time.time() - t0
                     print(f'  ...{checked} spiders checked, {len(unresolved)} unresolved so far, '
