@@ -65,6 +65,7 @@ the general playbook used here is:
 | The union-closed sets conjecture (Frankl, 1979) | see write-up (no counterexample; negative result, honestly scoped) | [`problems/union_closed_sets/FINDINGS.md`](problems/union_closed_sets/FINDINGS.md) |
 | Generalized Ulam (1-additive) sequence periodicity | see write-up (fresh classification sweep; caught and fixed a false-positive bug in our own detector along the way) | [`problems/ulam_sequences/FINDINGS.md`](problems/ulam_sequences/FINDINGS.md) |
 | Sequenceable groups (Keedwell's conjecture), order 33+ | see write-up (abandoned mid-investigation, partial data only) | [`problems/sequenceable_groups/FINDINGS.md`](problems/sequenceable_groups/FINDINGS.md) |
+| Bermond-Thomassen conjecture, k=4 (4 disjoint directed cycles from out-degree 7) | see write-up (no counterexample; exact tight n=9 example found, consistent with the conjecture) | [`problems/bermond_thomassen_k4/FINDINGS.md`](problems/bermond_thomassen_k4/FINDINGS.md) |
 
 ## Environment
 
