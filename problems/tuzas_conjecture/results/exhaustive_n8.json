@@ -1,0 +1,10 @@
+{
+  "n": 8,
+  "connected_only": false,
+  "checked_with_triangles": 11936,
+  "skipped_no_triangle": 410,
+  "max_ratio": 2.0,
+  "max_ratio_graph6": "G?ACKK",
+  "violations": [],
+  "elapsed_seconds": 116.32991695404053
+}
