@@ -66,6 +66,7 @@ the general playbook used here is:
 | Generalized Ulam (1-additive) sequence periodicity | see write-up (fresh classification sweep; caught and fixed a false-positive bug in our own detector along the way) | [`problems/ulam_sequences/FINDINGS.md`](problems/ulam_sequences/FINDINGS.md) |
 | Sequenceable groups (Keedwell's conjecture), order 33+ | see write-up (abandoned mid-investigation, partial data only) | [`problems/sequenceable_groups/FINDINGS.md`](problems/sequenceable_groups/FINDINGS.md) |
 | Bermond-Thomassen conjecture, k=4 (4 disjoint directed cycles from out-degree 7) | see write-up (no counterexample; exact tight n=9 example found, consistent with the conjecture) | [`problems/bermond_thomassen_k4/FINDINGS.md`](problems/bermond_thomassen_k4/FINDINGS.md) |
+| Vizing's conjecture (domination number of Cartesian products) | see write-up (exhaustive n=8,9: only 3 graphs pass every necessary condition, none violates the inequality against ~19 test graphs) | [`problems/vizing_conjecture/FINDINGS.md`](problems/vizing_conjecture/FINDINGS.md) |
 
 ## Environment
 
