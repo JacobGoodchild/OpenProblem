@@ -17,6 +17,7 @@ already-covered case.
 import argparse
 import json
 import os
+import random
 import sys
 import time
 
@@ -42,6 +43,8 @@ def main():
     ap.add_argument('--min-order', type=int, default=33)
     ap.add_argument('--max-order', type=int, default=200)
     ap.add_argument('--node-budget', type=int, default=30_000_000)
+    ap.add_argument('--randomized-trials', type=int, default=20)
+    ap.add_argument('--trial-node-budget', type=int, default=2_000_000)
     args = ap.parse_args()
 
     out_dir = os.path.join(os.path.dirname(__file__), 'results')
@@ -77,26 +80,58 @@ def main():
             continue
 
         t0 = time.time()
-        seq, nodes, exhausted = find_sequencing(mult, ident, n, time_limit_nodes=args.node_budget)
+        seq = None
+        total_nodes = 0
+        # phase 1: randomized restarts -- much better at FINDING a
+        # sequencing quickly when one exists than a fixed element order
+        # (a fixed order can get unluckily stuck; confirmed empirically:
+        # order 39 took 30M+ nodes with a fixed order but ~11K with a
+        # random one)
+        for trial in range(args.randomized_trials):
+            rng = random.Random(1000 * order + trial)
+            trial_seq, trial_nodes, trial_exhausted = find_sequencing(
+                mult, ident, n, time_limit_nodes=args.trial_node_budget, rng=rng)
+            total_nodes += trial_nodes
+            if trial_seq is not None:
+                seq = trial_seq
+                break
+
         elapsed = time.time() - t0
 
         if seq is not None:
             ok = verify_sequencing(mult, ident, n, seq)
             status = 'sequenceable' if ok else 'BUG-invalid-sequence-returned'
             print(f'  p={p},q={q} (order {order}): SEQUENCEABLE (independently verified: {ok}), '
-                  f'{nodes} nodes, {elapsed:.2f}s', flush=True)
-        elif exhausted:
-            status = 'inconclusive_node_budget_exhausted'
-            print(f'  p={p},q={q} (order {order}): inconclusive (node budget {args.node_budget} '
-                  f'exhausted without resolving), {elapsed:.2f}s', flush=True)
+                  f'found on randomized trial, {total_nodes} total nodes, {elapsed:.2f}s', flush=True)
         else:
-            status = 'NOT_SEQUENCEABLE_exhaustively_proven'
-            print(f'  p={p},q={q} (order {order}): *** NOT SEQUENCEABLE (exhaustively proven, '
-                  f'{nodes} nodes) -- POTENTIAL COUNTEREXAMPLE TO KEEDWELL\'S CONJECTURE *** '
-                  f'{elapsed:.2f}s', flush=True)
+            # phase 2: no randomized trial found one -- attempt ONE full
+            # deterministic exhaustive run for a genuine non-existence
+            # proof (only this can actually prove non-sequenceability;
+            # randomized restarts alone cannot)
+            print(f'  p={p},q={q} (order {order}): no sequencing found in {args.randomized_trials} '
+                  f'randomized trials ({total_nodes} nodes) -- attempting exhaustive proof...', flush=True)
+            t1 = time.time()
+            seq2, nodes2, exhausted2 = find_sequencing(mult, ident, n, time_limit_nodes=args.node_budget)
+            elapsed2 = time.time() - t1
+            total_nodes += nodes2
+            elapsed += elapsed2
+            if seq2 is not None:
+                ok = verify_sequencing(mult, ident, n, seq2)
+                seq = seq2
+                status = 'sequenceable' if ok else 'BUG-invalid-sequence-returned'
+                print(f'    -> found on deterministic exhaustive attempt after all '
+                      f'(independently verified: {ok}), {nodes2} nodes, {elapsed2:.2f}s', flush=True)
+            elif exhausted2:
+                status = 'inconclusive_node_budget_exhausted'
+                print(f'    -> still inconclusive (exhaustive attempt also hit node budget '
+                      f'{args.node_budget}), {elapsed2:.2f}s', flush=True)
+            else:
+                status = 'NOT_SEQUENCEABLE_exhaustively_proven'
+                print(f'    *** NOT SEQUENCEABLE (exhaustively proven, {nodes2} nodes) -- '
+                      f'POTENTIAL COUNTEREXAMPLE TO KEEDWELL\'S CONJECTURE *** {elapsed2:.2f}s', flush=True)
 
         results.append({'p': p, 'q': q, 'order': order, 'status': status,
-                         'nodes': nodes, 'elapsed': elapsed,
+                         'nodes': total_nodes, 'elapsed': elapsed,
                          'sequence': seq if seq is not None else None})
 
         with open(os.path.join(out_dir, 'search_results.json'), 'w') as f:

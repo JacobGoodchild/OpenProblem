@@ -132,12 +132,19 @@ def verify_group_table(mult, identity, n):
     return True
 
 
-def find_sequencing(mult, identity, n, time_limit_nodes=50_000_000):
+def find_sequencing(mult, identity, n, time_limit_nodes=50_000_000, rng=None):
     """Backtracking search for a sequencing: order g_1=identity,
     g_2,...,g_n such that partial products are all distinct. Returns
     the sequence of element indices if found, else None (either proven
     no sequencing exists via exhaustive search, or the node budget was
-    exhausted -- caller should check the returned 'exhausted' flag)."""
+    exhausted -- caller should check the returned 'exhausted' flag).
+    If `rng` is given, the order in which candidate next-elements are
+    tried at each choice point is shuffled -- turns this from a fixed
+    deterministic DFS (which can get unluckily stuck exploring one
+    hopeless branch order first) into a randomized search well suited
+    to "does ANY valid ordering exist" questions, where solutions (when
+    they exist) tend to be common and a lucky random order finds one
+    fast, rather than needing genuinely exhaustive coverage."""
     used_elements = [False] * n
     used_elements[identity] = True
     used_partial_products = [False] * n
@@ -154,7 +161,8 @@ def find_sequencing(mult, identity, n, time_limit_nodes=50_000_000):
         if len(sequence) == n:
             return True
         cur_partial = partial_holder[0]
-        for g in range(n):
+        candidates = range(n) if rng is None else rng.sample(range(n), n)
+        for g in candidates:
             if used_elements[g]:
                 continue
             new_partial = mult[cur_partial][g]
