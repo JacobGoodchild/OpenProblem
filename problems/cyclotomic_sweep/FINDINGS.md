@@ -73,6 +73,37 @@ match; or search prime *powers* (not just primes) as the modulus, which
 covers a wider algebraic family (this is how some literature
 constructions, e.g. those built over `GF(p^k)`, actually work).
 
+## Addendum: extending to true prime-power moduli GF(p^k), k>=2
+
+Following through on the "what would move this forward" note above, we
+extended the search to actual prime-power moduli (not just primes) using
+proper finite field arithmetic (`lib/cyclotomic_ramsey_gf.py`, via the
+`galois` package) — a strictly larger algebraic family, since some real
+literature constructions are built over `GF(p^k)` rather than `GF(p)`.
+Validated against small hand-checkable cases (e.g. `GF(4)`, `r=3`: the
+3 singleton cosets trivially give a valid `(K3,K3,K3)`-avoiding
+coloring, confirmed correct) before trusting it.
+
+Swept every eligible prime power from 4 to 3,000 (only 19-21 values
+per target turned out eligible — most prime powers in this range don't
+satisfy the `r | (q-1)` and `-1 in subgroup` conditions) against the
+same 5 targets:
+
+| Target | GF(p^k) hits found (q=4..3000, k>=2) | matches/beats record? |
+|---|---|---|
+| R(5,5) | 9 | no |
+| R(6,6) | 9, 25 | no |
+| R(3,11) | (none) | no |
+| R(5,6) | 9 | no |
+| R(3,3,3,3) | (none) | no |
+
+No new records, and nothing close to any target's actual record — a
+clean, complete negative extension. Combined with the prime-only sweep,
+this rules out both cyclotomic families (prime and prime-power moduli)
+up to several thousand as a source of new lower bounds for any of these
+5 targets, beyond the one exact match already found (R(6,6) via the
+prime case, Paley graph mod 101).
+
 ## Reproducing
 
 ```
