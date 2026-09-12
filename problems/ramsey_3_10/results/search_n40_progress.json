@@ -1,0 +1,10 @@
+{
+  "n": 40,
+  "target_indep": 10,
+  "checked": 988116,
+  "triangle_free_count": 232,
+  "ilp_calls": 232,
+  "found": [],
+  "completed_popcount_down_to": 7,
+  "elapsed_seconds": 14.644806385040283
+}
