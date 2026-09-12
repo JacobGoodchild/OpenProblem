@@ -59,8 +59,80 @@
       "ok": 500,
       "flagged": 0,
       "elapsed": 17.18779754638672
+    },
+    "20": {
+      "trials": 500,
+      "ok": 500,
+      "flagged": 0,
+      "elapsed": 21.237231731414795
+    },
+    "21": {
+      "trials": 500,
+      "ok": 500,
+      "flagged": 0,
+      "elapsed": 24.58890414237976
+    },
+    "22": {
+      "trials": 500,
+      "ok": 500,
+      "flagged": 0,
+      "elapsed": 32.638686656951904
+    },
+    "23": {
+      "trials": 500,
+      "ok": 500,
+      "flagged": 0,
+      "elapsed": 39.40302038192749
+    },
+    "24": {
+      "trials": 500,
+      "ok": 500,
+      "flagged": 0,
+      "elapsed": 48.33841872215271
+    },
+    "25": {
+      "trials": 500,
+      "ok": 500,
+      "flagged": 0,
+      "elapsed": 64.9817407131195
+    },
+    "26": {
+      "trials": 150,
+      "ok": 150,
+      "flagged": 0,
+      "elapsed": 28.07162046432495
+    },
+    "27": {
+      "trials": 150,
+      "ok": 150,
+      "flagged": 0,
+      "elapsed": 32.139177322387695
+    },
+    "28": {
+      "trials": 150,
+      "ok": 150,
+      "flagged": 0,
+      "elapsed": 40.389914989471436
+    },
+    "29": {
+      "trials": 150,
+      "ok": 150,
+      "flagged": 0,
+      "elapsed": 53.146281003952026
+    },
+    "30": {
+      "trials": 150,
+      "ok": 150,
+      "flagged": 0,
+      "elapsed": 59.09895706176758
+    },
+    "31": {
+      "trials": 150,
+      "ok": 150,
+      "flagged": 0,
+      "elapsed": 57.18712568283081
     }
   },
   "flagged": [],
-  "total_checked": 5000
+  "total_checked": 8900
 }
