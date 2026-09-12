@@ -55,6 +55,7 @@ the general playbook used here is:
 | The Ramsey number R(4,7) | see write-up (partial, 3.5% coverage) | [`problems/ramsey_4_7/FINDINGS.md`](problems/ramsey_4_7/FINDINGS.md) |
 | Schur number S(6) | see write-up (no attempt made, method didn't scale) | [`problems/schur_6/FINDINGS.md`](problems/schur_6/FINDINGS.md) |
 | Multicolor Ramsey number R(3,3,5) | see write-up (found R(3,3,5)>=42, comparison to literature record unconfirmed) | [`problems/ramsey_3_3_5/FINDINGS.md`](problems/ramsey_3_3_5/FINDINGS.md) |
+| The Ramsey number R(5,5) | see write-up (negative result, pure-circulant search fell 1 short of the known record) | [`problems/ramsey_5_5/FINDINGS.md`](problems/ramsey_5_5/FINDINGS.md) |
 
 ## Environment
 
