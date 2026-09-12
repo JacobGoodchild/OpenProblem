@@ -24,9 +24,11 @@ assert match, 'FAILED to reproduce the classical Ulam sequence!'
 terms = generate_ulam(4, 5, 5000)
 g = gaps(terms)
 res = find_period(g, max_period=50)
-print(f'U(4,5), 5000 terms: periodicity result = {res} '
-      f'(expected: some period found, proven eventually periodic in the literature)')
+print(f'U(4,5), 5000 terms: periodicity result (period, span_checked, match_fraction) = {res} '
+      f'(expected: some period found with match_fraction near 1.0, proven eventually periodic '
+      f'in the literature)')
 assert res is not None, 'FAILED to detect periodicity in a known-periodic case!'
+assert res[2] > 0.99, f'Match fraction {res[2]} too low -- weak/spurious periodicity claim!'
 
 # independent count of even terms in U(4,5) -- literature says exactly 3 even terms total
 n_even = int((terms % 2 == 0).sum())

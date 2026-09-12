@@ -30,7 +30,7 @@ def generate_ulam(a, b, n_terms, max_bound=None):
     Returns a numpy int64 array of terms (may be shorter than n_terms
     if max_bound is reached first -- caller should check)."""
     if max_bound is None:
-        max_bound = int(n_terms * 8) + 1000  # generous safety margin
+        max_bound = int(n_terms * 20) + 2000  # generous safety margin
 
     count = np.zeros(max_bound + 1, dtype=np.int16)
     terms = np.empty(n_terms, dtype=np.int64)
@@ -70,36 +70,31 @@ def gaps(terms):
     return np.diff(terms)
 
 
-def find_period(gap_seq, min_period=1, max_period=200, min_repeats=5, tail_frac=0.3):
-    """Look for a repeating cycle in the TAIL of the gap sequence (the
-    last tail_frac of it), trying period lengths from min_period to
-    max_period. Returns (period, num_repeats_confirmed) for the first
-    (smallest) period that repeats at least min_repeats times
-    consecutively in the tail, or None if none found."""
+def find_period(gap_seq, min_period=1, max_period=200, tail_frac=0.3,
+                 min_span_multiple=20, required_match_frac=0.999):
+    """Look for a repeating cycle in the TAIL of the gap sequence.
+    For each candidate period p, require gap[i] == gap[i-p] to hold for
+    at least `required_match_frac` of ALL positions i across a tail
+    span of at least min_span_multiple*p elements (not just a handful
+    near the very end -- a short lucky run of equal values, common
+    when one gap value is simply frequent, must NOT be mistaken for
+    true periodicity). Returns (period, span_checked, match_fraction)
+    for the smallest period passing this strict test, or None."""
     n = len(gap_seq)
     tail_start = int(n * (1 - tail_frac))
     tail = gap_seq[tail_start:]
+    tail_len = len(tail)
+
     for p in range(min_period, max_period + 1):
-        if len(tail) < p * min_repeats:
+        span = min(tail_len, max(p * min_span_multiple, 500))
+        if span <= p:
             continue
-        # check the last p*min_repeats elements for period p
-        chunk = tail[-(p * min_repeats):]
-        block0 = chunk[:p]
-        ok = True
-        for r in range(1, min_repeats):
-            if not np.array_equal(chunk[r * p:(r + 1) * p], block0):
-                ok = False
-                break
-        if ok:
-            # extend backward to see how far the period actually holds
-            repeats = min_repeats
-            while True:
-                start = len(tail) - (repeats + 1) * p
-                if start < 0:
-                    break
-                if np.array_equal(tail[start:start + p], block0):
-                    repeats += 1
-                else:
-                    break
-            return p, repeats
+        window = tail[-span:]
+        a = window[p:]
+        b = window[:-p]
+        matches = int(np.sum(a == b))
+        total = len(a)
+        frac = matches / total
+        if frac >= required_match_frac:
+            return p, span, frac
     return None

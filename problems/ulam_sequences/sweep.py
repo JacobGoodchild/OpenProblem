@@ -14,6 +14,7 @@ of settled 60-year-old territory.
 """
 import argparse
 import json
+import math
 import os
 import sys
 import time
@@ -34,10 +35,10 @@ def classify(a, b, n_terms, max_period=80):
     if res is None:
         return {'a': a, 'b': b, 'terms_reached': int(len(terms)), 'requested': n_terms,
                 'status': 'no_period_found', 'elapsed': elapsed}
-    period, repeats = res
+    period, span, frac = res
     return {'a': a, 'b': b, 'terms_reached': int(len(terms)), 'requested': n_terms,
-            'status': 'periodic', 'period': int(period), 'repeats_confirmed': int(repeats),
-            'elapsed': elapsed}
+            'status': 'periodic', 'period': int(period), 'span_checked': int(span),
+            'match_fraction': float(frac), 'elapsed': elapsed}
 
 
 def main():
@@ -54,10 +55,13 @@ def main():
     t_start = time.time()
     for a in range(1, args.a_max + 1):
         for b in range(a + 1, args.b_max + 1):
+            if math.gcd(a, b) != 1:
+                continue  # gcd(a,b)=d>1 is just a d-scaled copy of the (a/d,b/d) sequence
             r = classify(a, b, args.n_terms)
             results.append(r)
             print(f"({a},{b}): {r['status']}"
-                  + (f" period={r.get('period')} confirmed x{r.get('repeats_confirmed')}"
+                  + (f" period={r.get('period')} match={r.get('match_fraction'):.4f} "
+                     f"over span={r.get('span_checked')}"
                      if r['status'] == 'periodic' else '')
                   + f"  [{r['elapsed']:.1f}s]", flush=True)
 
